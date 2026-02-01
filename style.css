@@ -2,61 +2,74 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background: #f4f4f4;
+  background: #f9f9f9;
   color: #333;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px 50px;
-  background: #222;
+  align-items: center;
+  padding: 15px 60px;
+  background: #111;
 }
 
-nav .logo {
+.logo {
   color: #00bcd4;
 }
 
-nav ul {
-  display: flex;
+.nav-links {
   list-style: none;
+  display: flex;
 }
 
-nav ul li {
+.nav-links li {
   margin-left: 20px;
 }
 
-nav ul li a {
-  color: #fff;
+.nav-links a {
+  color: white;
   text-decoration: none;
 }
 
 .home {
-  height: 90vh;
-  background: linear-gradient(to right, #00bcd4, #2196f3);
+  min-height: 100vh;
+  background: linear-gradient(to right, #00bcd4, #3f51b5);
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+  padding: 80px 20px;
 }
 
 .home span {
   color: #ffeb3b;
 }
 
+.home-buttons {
+  margin: 25px 0;
+}
+
 .btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #222;
+  background: #111;
   color: white;
+  padding: 10px 20px;
+  margin: 5px;
   text-decoration: none;
   border-radius: 5px;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid white;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 22px;
+  margin: 0 10px;
 }
 
 section {
@@ -64,43 +77,63 @@ section {
 }
 
 h2 {
-  margin-bottom: 20px;
-  color: #2196f3;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #3f51b5;
 }
 
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
 }
 
-.skill {
-  background: #2196f3;
+.skills-container span {
+  background: #3f51b5;
   color: white;
-  padding: 8px 15px;
+  padding: 8px 16px;
   border-radius: 20px;
 }
 
-.soft-skills {
-  list-style: square;
-  margin-left: 20px;
-}
-
-.project {
+.project-card {
   background: white;
   padding: 20px;
   margin-bottom: 20px;
-  border-left: 5px solid #2196f3;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.project a {
-  color: #2196f3;
+.project-card a {
   text-decoration: none;
+  color: #3f51b5;
+}
+
+.tech {
+  font-size: 14px;
+  color: #666;
 }
 
 footer {
-  background: #222;
+  background: #111;
   color: white;
   text-align: center;
   padding: 15px;
 }
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+}
+
